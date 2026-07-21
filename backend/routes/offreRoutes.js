@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { createOffre, getAllOffres, getMesOffres } = require("../controllers/offreController");
+const {
+  createOffre,
+  getAllOffres,
+  getMesOffres,
+} = require("../controllers/offreController");
 const { protect, isRecruteur } = require("../middleware/authMiddleware");
 
 router.post("/", protect, isRecruteur, createOffre);
